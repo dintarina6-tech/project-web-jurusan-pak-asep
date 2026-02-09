@@ -1,0 +1,173 @@
+<?php
+// ===== KONEKSI DATABASE =====
+$conn = mysqli_connect("localhost","root","","ppdb_smkn1");
+if(!$conn){
+    die("Koneksi database gagal");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>PPDB SMKN 1 Garut</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    background:#0a4fa3;
+    padding:12px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+    font-weight:bold;
+}
+
+/* HEADER */
+header{
+    background:#0a4fa3;
+    text-align:center;
+    padding:20px;
+    color:white;
+}
+.logo{
+    width:80px;
+}
+
+/* JURUSAN */
+.jurusan-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:20px;
+}
+
+.jurusan{
+    background:white;
+    width:270px;
+    margin:15px;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,.1);
+}
+
+.jurusan img{
+    width:70px;
+    display:block;
+    margin:auto;
+}
+
+.jurusan h2{
+    font-size:16px;
+    text-align:center;
+    color:black;
+}
+
+.jurusan ul{
+    padding-left:18px;
+    font-size:14px;
+}
+
+/* LINK HIJAU */
+.info-link{
+    display:block;
+    text-align:center;
+    margin-top:8px;
+    text-decoration:none;
+    color:white;
+    background:#2ecc71;
+    padding:8px;
+    border-radius:5px;
+    font-weight:bold;
+}
+.info-link:hover{
+    background:#27ae60;
+}
+
+/* FOOTER */
+footer{
+    background:#0a4fa3;
+    text-align:center;
+    padding:10px;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div><b>SMKN 1 GARUT</b></div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#jurusan">Jurusan</a>
+    </div>
+</nav>
+
+<header>
+    <img src="logosemea.png" class="logo">
+    <h1>SMKN 1 GARUT</h1>
+    <p>Profil Jurusan</p>
+</header>
+
+<section class="jurusan-container" id="jurusan">
+
+    <!-- MPLB -->
+    <div class="jurusan">
+        <img src="logompl.png">
+        <h2>Manajemen Perkantoran dan Layanan Bisnis</h2>
+        <ul>
+            <li>Administrasi Perkantoran</li>
+            <li>Pengelolaan Arsip</li>
+            <li>Komunikasi Bisnis</li>
+        </ul>
+
+        <a class="info-link" href="https://www.instagram.com/info_mplb/" target="_blank">
+            Info MPLB
+        </a>
+
+        <a class="info-link" href="https://www.instagram.com/mplsmknegeri1garut?igsh=dTh4bzg0M3JxZGl1" target="_blank">
+            Instagram Resmi MPL SMKN 1 Garut
+        </a>
+    </div>
+
+    <!-- BDP -->
+    <div class="jurusan">
+        <img src="pm.png">
+        <h2>Bisnis Daring dan Pemasaran</h2>
+        <ul>
+            <li>Digital Marketing</li>
+            <li>E-Commerce</li>
+            <li>Strategi Penjualan</li>
+        </ul>
+
+        <a class="info-link" href="https://www.instagram.com/info_bdp/" target="_blank">
+            Info BDP
+        </a>
+
+        <a class="info-link" href="https://www.instagram.com/bdpsmkn1garut?igsh=dTRzbW16ZG9uZW1i" target="_blank">
+            Instagram Resmi BDP SMKN 1 Garut
+        </a>
+    </div>
+
+</section>
+
+<footer>
+    © PPDB SMKN 1 GARUT
+</footer>
+
+</body>
+</html>
